@@ -1,0 +1,441 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap);
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Manrope", sans-serif;
+  background-image: url(/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(230, 100%, 99%);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.upper-container .upper-text h1,
+.down-container .pricing-text {
+  color: hsl(227, 35%, 25%);
+}
+.down-container {
+  background-color: white;
+}
+.upper-container .upper-text p,
+.down-container h1,
+.down-container label,
+.wrapper h5,
+.wrapper-down h4 {
+  color: hsl(225, 20%, 60%);
+}
+
+@media screen and (min-width: 366px) {
+  /* .container {
+    margin: 70px;
+    padding: 20px;
+  }
+  .upper-container {
+    text-align: center;
+    background: url(/pattern-circles.svg) no-repeat center;
+    width: 200px;
+  } */
+
+  .upper-container {
+    text-align: center;
+    margin: 50px;
+  }
+
+  .upper-container .upper-text {
+    padding: 50px;
+    background: url(/pattern-circles.svg) no-repeat center;
+  }
+
+  .down-container {
+    align-self: center;
+    width: 533px;
+    height: 400px;
+    /* background-color: black; */
+    border-radius: 10px;
+    box-shadow: 0px 55px 70px -44px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow: 0px 55px 70px -44px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 0px 55px 70px -44px rgba(0, 0, 0, 0.44);
+  }
+  .down-container {
+    padding: 35px;
+    display: inline;
+  }
+
+  .pageviews-text {
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    position: relative;
+    top: 12px;
+  }
+  .pricing-text {
+    position: relative;
+    top: calc(-68px + 25px);
+    text-align: right;
+    margin-bottom: 45px;
+  }
+  .pricing-text label {
+    font-size: 13px;
+    position: relative;
+    top: calc(-68px + 60px);
+  }
+
+  .slider {
+    appearance: none;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    outline: none;
+    border-radius: 30px;
+    position: relative;
+    top: 50px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 38px;
+    width: 38px;
+    background: hsl(174, 86%, 45%) url(/icon-slider.svg) no-repeat center center;
+    border-radius: 100%;
+    border: none;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    background-color: hsl(175, 62%, 43%);
+  }
+
+  .switch {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .switch-label {
+    display: inline-block;
+    width: 10%;
+    height: 20px;
+    background-color: hsl(223, 50%, 87%);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .switch-label::after {
+    content: "";
+    width: 29%;
+    height: 13px;
+    background-color: white;
+    position: absolute;
+    border-radius: 9999px;
+    top: 3.7px;
+    left: 4px;
+    transition: 0.2s;
+  }
+
+  .switch-label:hover {
+    background-color: hsl(174, 77%, 80%);
+  }
+
+  .switch:checked + .switch-label::after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .wrapper h5#monthly {
+    margin-left: 72px;
+  }
+  .wrapper h4 {
+    font-size: 10px;
+    font-weight: lighter;
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 100px;
+    margin-left: 5px;
+  }
+  .wrapper h4 span#minus {
+    visibility: hidden;
+  }
+
+  .wrapper h5 {
+    font-size: 12px;
+  }
+  .wrapper h4 {
+    font-size: 9px;
+  }
+
+  .down-container hr {
+    margin-bottom: 1rem;
+    width: 100%;
+    background-color: hsl(231, 62%, 96%);
+    border: none;
+    height: 0.5px;
+  }
+
+  .wrapper-down {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .wrapper-down div h4 {
+    font-size: 13px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+  .wrapper-down div h4::before {
+    content: url(/icon-check.svg);
+    margin-right: 5px;
+  }
+  .wrapper-down button {
+    margin-left: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: hsl(227, 35%, 25%);
+    border: none;
+    border-radius: 100px;
+    color: hsl(226, 100%, 87%);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 366px) {
+  .upper-container {
+    margin: 20px;
+    padding: 26px;
+    background: url(/pattern-circles.svg) no-repeat center / contain;
+    text-align: center;
+  }
+  .upper-container .upper-text h1 {
+    font-size: 1em;
+  }
+
+  .upper-container .upper-text p {
+    margin-top: 9px;
+    font-size: 0.8rem;
+  }
+
+  .upper-container .upper-text p span {
+    display: inline-block;
+  }
+
+  .down-container {
+    align-self: center;
+    text-align: center;
+    width: 90%;
+    height: 400px;
+    min-height: 400px;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 55px 70px -44px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow: 0px 55px 70px -44px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 0px 55px 70px -44px rgba(0, 0, 0, 0.44);
+  }
+
+  .down-container .pageviews-text {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
+  }
+  .down-container .pricing-text {
+    font-size: 2rem;
+  }
+
+  .down-container .pricing-text label {
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+
+  .slider {
+    appearance: none;
+    height: 5px;
+    width: 14rem;
+    background-color: black;
+    margin: 40px;
+    outline: none;
+    border-radius: 30px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 38px;
+    width: 38px;
+    background: hsl(174, 86%, 45%) url(/icon-slider.svg) no-repeat center center;
+    border-radius: 100%;
+    border: none;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    background-color: hsl(175, 62%, 43%);
+  }
+
+  .switch {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .switch-label {
+    display: inline-block;
+    width: 13%;
+    height: 20px;
+    background-color: hsl(223, 50%, 87%);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 10px;
+    margin-left: 5px;
+  }
+
+  .switch-label::after {
+    content: "";
+    width: 32%;
+    height: 13px;
+    background-color: white;
+    position: absolute;
+    border-radius: 9999px;
+    top: 3.7px;
+    left: 4px;
+    transition: 0.2s;
+  }
+
+  .switch-label:hover {
+    background-color: hsl(174, 77%, 80%);
+  }
+
+  .switch:checked + .switch-label::after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  .wrapper h5 {
+    font-size: 11px;
+    font-weight: lighter;
+  }
+
+  .wrapper h4 {
+    font-size: 10px;
+    font-weight: lighter;
+    margin-right: -15px;
+  }
+
+  .wrapper h4 {
+    color: hsl(15, 100%, 70%);
+    background-color: hsl(14, 92%, 95%);
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 5px;
+    border-radius: 100px;
+  }
+
+  .wrapper h4 span#discount {
+    display: none;
+  }
+
+  .down-container hr {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    background-color: hsl(231, 62%, 96%);
+    border: none;
+    height: 0.5px;
+  }
+
+  .wrapper-down {
+    display: inline;
+  }
+
+  .wrapper-down h4 {
+    margin-top: 5px;
+    color: hsl(225, 20%, 60%);
+    font-size: 10px;
+  }
+
+  .wrapper-down h4::before {
+    content: url(/icon-check.svg);
+    margin-right: 5px;
+  }
+
+  .wrapper-down h4:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  .wrapper-down button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: hsl(227, 35%, 25%);
+    border: none;
+    border-radius: 100px;
+    color: hsl(226, 100%, 87%);
+  }
+}
