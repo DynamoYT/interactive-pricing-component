@@ -141,6 +141,7 @@ a {
     background: hsl(174, 86%, 45%) url(/icon-slider.svg) no-repeat center center;
     border-radius: 100%;
     border: none;
+    cursor: pointer;
   }
 
   .slider::-webkit-slider-thumb:hover {
@@ -253,6 +254,7 @@ a {
     border-radius: 100px;
     color: hsl(226, 100%, 87%);
     text-align: center;
+    cursor: pointer;
   }
 }
 
