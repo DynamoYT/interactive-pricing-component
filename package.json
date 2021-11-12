@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "12.0.3",
@@ -14,6 +15,8 @@
   },
   "devDependencies": {
     "eslint": "7.32.0",
-    "eslint-config-next": "12.0.3"
-  }
+    "eslint-config-next": "12.0.3",
+    "gh-pages": "^3.2.3"
+  },
+  "homepage": "https://dynamoyt.github.io/interactive-pricing-component/"
 }
